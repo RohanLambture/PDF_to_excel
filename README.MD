@@ -40,7 +40,7 @@ To install and set up the PDF to Excel app, follow these steps:
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/jaffa-ai/pdf-to-excel/tree/main/src/similarity%20app
+    git clone https://github.com/RohanLambture/PDF_to_excel.git
     ```
 
 2. Install dependencies:
