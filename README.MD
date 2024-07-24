@@ -1,16 +1,16 @@
-# Jaffa PDF to Excel
+# PDF to Excel
 
 ## Overview
 
-Jaffa PDF to Excel is a Python-based application designed to streamline the process of extracting standalone cashflow data from company result filings. 
-The app takes in a PDF file containing the result, additional details such as the quarter and company ticker, and an optional Jaffa sheet. 
-It then parses and filters out the standalone cashflow table for the specified quarter, creating or updating a Jaffa Excel sheet.
+PDF to Excel is a Python-based application designed to streamline the process of extracting standalone cashflow data from company result filings. 
+The app takes in a PDF file containing the result, additional details such as the quarter and company ticker, and an optional sheet. 
+It then parses and filters out the standalone cashflow table for the specified quarter, creating or updating a Excel sheet.
 
 ## Features
 
 - Accepts PDF files of varying quality.
 - Extracts standalone cashflow data for a specified quarter.
-- Creates or updates a Jaffa Excel sheet with the extracted data.
+- Creates or updates a Excel sheet with the extracted data.
 - Automates the manual process of data entry, saving time for users.
 
 ## Technologies Used
@@ -35,7 +35,7 @@ It then parses and filters out the standalone cashflow table for the specified q
 
 ## Installation
 
-To install and set up the Jaffa PDF to Excel app, follow these steps:
+To install and set up the PDF to Excel app, follow these steps:
 
 1. Clone the repository:
 
@@ -74,11 +74,11 @@ streamlit run app.py
 
 - The app after taking the pdf table extracts the text and table elements using Adobe Extract.
 - Then after that, relevant table (standalone) is identified using the row and column count from the extracted zip folder containing all the extracted tables and text in the pdf. 
-- After identifying this table we now check if there is an existing jaffa sheet or not.
-- If jaffa sheet exists we update it or create a new one.
+- After identifying this table we now check if there is an existing  sheet or not.
+- If sheet exists we update it or create a new one.
 - Extracted table is in the form of excel, so we read that using pandas.
     - Modify it so it looks clean.
-    - If jaffa sheet is missing we create a new excel sheet using this input.
+    - If  sheet is missing we create a new excel sheet using this input.
     - if it does exist, we run a similarity test between both th particulars from input and jaffa sheet, and fill the data in a new column if the matching is greater than 85%:
         ```python
             def compare(input_1,input_2):
